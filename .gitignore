@@ -1,0 +1,5 @@
+# PhpStorm
+.idea
+
+# Codeception. Used for IDE autocompletion during development.
+codecept.phar
