@@ -80,14 +80,14 @@ class Page
      *
      * @var string
      */
-    public static $drupalMessageSelector = '.alert';
+    public static $drupalMessageSelector = '.status';
 
     /**
      * Selector for Drupal error messages set by drupal_set_message().
      *
      * @var string
      */
-    public static $drupalErrorMessageSelector = '.alert-danger';
+    public static $drupalErrorMessageSelector = '.error';
 
     /**
      * Selector for Drupal messages set by drupal_set_message() in the Seven admin theme.
@@ -122,7 +122,7 @@ class Page
      *
      * @var string
      */
-    public static $editTabSelector = '.nav-tabs.primary';
+    public static $editTabSelector = '.tabs';
 
     /**
      * CSS selector for the primary tabs (in administration theme).
@@ -145,7 +145,7 @@ class Page
      * @var string
      */
     public static $nodeEditTabLinkSelector =
-        '//div[@class="tabs"]//ul[contains(@class,"nav-tabs primary")]/li[2]/a';
+        '//div[@class="tabs"]//ul[contains(@class,"tabs primary")]/li[2]/a';
 
     /**
      * Selector to detect if drupal core blocks present.
