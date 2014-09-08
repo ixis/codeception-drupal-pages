@@ -137,7 +137,7 @@ class Page
      *
      * @var string
      */
-    public static $adminVerticalTabPaneSelector = '.vertical-tabs-panes';
+    public static $adminVerticalTabPaneSelector = '.vertical-tab-button';
 
     /**
      * XPath selector used to grab the anchor link within a node's edit tab.
