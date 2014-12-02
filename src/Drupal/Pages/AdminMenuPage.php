@@ -28,23 +28,26 @@ class AdminMenuPage
     /**
      * Routing.
      *
-     * @param string $param
+     * @param string $menuName
      *   The system name of the menu, such as 'menu-business'.
+     * @param string $op
+     *   The operation to perform on the menu. Possible values are 'add' or
+     *   'edit'.
      *
      * @return string
      *   The correct relative path to the page.
      *
      * @throws \Exception
      */
-    public static function route($param = '')
+    public static function route($menuName = '', $op = '')
     {
-        switch ($param) {
+        switch ($op) {
             case '':
                 return static::URL;
             case 'add':
-                return static::URL . '/manage/' . $param . '/add';
+                return static::URL . '/manage/' . $menuName . '/add';
             case 'edit':
-                return static::URL . '/manage/' . $param . '/edit';
+                return static::URL . '/manage/' . $menuName . '/edit';
         }
 
         throw new \Exception('Invalid route parameter passed to ' . __CLASS__ . ' PageObject.');
