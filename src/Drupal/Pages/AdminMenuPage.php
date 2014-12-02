@@ -26,6 +26,20 @@ class AdminMenuPage
     public static $pageTitle = 'Menus';
 
     /**
+     * Selector for the 'save' button on an edit menu page.
+     *
+     * @var string
+     */
+    public static $saveButtonSelector = '#edit-actions-submit';
+
+    /**
+     * Selector for the 'delete' button on an edit menu page.
+     *
+     * @var string
+     */
+    public static $deleteButtonSelector = '#edit-actions-delete';
+
+    /**
      * Routing.
      *
      * @param string $menuName
