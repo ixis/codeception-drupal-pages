@@ -33,11 +33,39 @@ class AdminMenuPage
     public static $saveButtonSelector = '#edit-actions-submit';
 
     /**
+     * Selector for the title field when editing a menu.
+     *
+     * @var string
+     */
+    public static $titleFieldSelector = "#edit-title--2";
+
+    /**
+     * Selector for the Description field when editing a menu.
+     *
+     * @var string
+     */
+    public static $descriptionFieldSelector = "#edit-description--2";
+
+    /**
+     * Selector for the 'edit description' checkbox toggle.
+     *
+     * @var string
+     */
+    public static $editDescriptionToggle = "#edit-description-toggle";
+
+    /**
      * Selector for the 'delete' button on an edit menu page.
      *
      * @var string
      */
     public static $deleteButtonSelector = '#edit-actions-delete';
+
+    /**
+     * Selector for the 'delete' confirmation button.
+     *
+     * @var string
+     */
+    public static $deleteConfirmationButtonSelector = '#edit-submit';
 
     /**
      * Routing.
