@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * PageObject for /admin/structure/menu and associated pages (menu module).
+ * PageObject for /admin/structure/menu/add.
  */
 
 namespace Codeception\Module\Drupal\Pages;
