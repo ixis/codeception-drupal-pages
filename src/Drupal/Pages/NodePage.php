@@ -44,6 +44,13 @@ class NodePage extends Page
     public static $editFormStatusID = '#edit-status';
 
     /**
+     * The selector for the save button on the node edit form.
+     *
+     * @var string
+     */
+    public static $saveButtonSelector = '#edit-submit';
+
+    /**
      * Basic route example.
      *
      * @param int $nid
