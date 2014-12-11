@@ -19,20 +19,39 @@ class AdminFilesPage extends Page
     public static $pageTitle = 'Content';
 
     /**
+     * URL/path to this page.
+     *
      * @var string
-     *   URL/path to this page.
      */
     protected static $URL = 'admin/content/file';
 
     /**
      * Selector for the 'filename' field.
+     *
+     * @var string
      */
     public static $userNameCellSelector = 'td.views-field-name';
 
     /**
      * Selector for a specific role for a specific user.
+     *
+     * @var string
      */
     public static $filenameSelector = '//td[contains(@class, "views-field-name")]/a[text() = "%s"]';
+
+    /**
+     * Selector for the 'type' filter drop-down.
+     *
+     * @var string
+     */
+    public static $typeFilterSelector = '#edit-type';
+
+    /**
+     * Selector for the 'apply' button on the file filter.
+     *
+     * @var string
+     */
+    public static $filterSubmitSelector = '#edit-submit-admin-views-file';
 
     /**
      * Basic route example.
