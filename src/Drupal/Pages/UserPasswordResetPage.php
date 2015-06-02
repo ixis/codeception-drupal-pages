@@ -39,6 +39,13 @@ class UserPasswordResetPage extends Page
     public static $submitSelector = '#edit-submit';
 
     /**
+     * The message given when a password reset has been sent.
+     *
+     * @var string
+     */
+    public static $resetMessage = 'Further instructions have been sent to your e-mail address.';
+
+    /**
      * Get route for current page.
      *
      * @return string
