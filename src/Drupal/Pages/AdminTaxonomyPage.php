@@ -84,6 +84,13 @@ class AdminTaxonomyPage extends Page
     public static $termListTermNameSelector = '//a[text() = "%s"]/../../td[3]/a';
 
     /**
+     * XPath to the element that contains the field machine name on the term list page.
+     *
+     * @var string
+     */
+    public static $fieldMachineNameSelector = "//table[@id='field-overview']//td";
+
+    /**
      *  route().
      *
      * @param string $param
