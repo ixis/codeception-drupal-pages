@@ -1,5 +1,5 @@
 {
-  "name": "chriscohen/codeception-drupal-pages",
+  "name": "ixis/codeception-drupal-pages",
   "description": "A Codeception module to provide standard Drupal page objects.",
   "authors": [
     {
