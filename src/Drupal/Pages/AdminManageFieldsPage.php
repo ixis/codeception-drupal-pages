@@ -8,7 +8,6 @@ namespace Codeception\Module\Drupal\Pages;
 
 /**
  * Class AdminManageFieldsPage
- * @package Youthspace\Pages
  */
 class AdminManageFieldsPage extends Page
 {
