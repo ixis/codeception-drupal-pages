@@ -12,11 +12,6 @@ namespace Codeception\Module\Drupal\Pages;
 class Page
 {
     /**
-     * Key used for Drupal/site configuration in acceptance.suite.yml
-     */
-    const DRUPAL_MODULE_CONFIG_KEY = 'Drupal';
-
-    /**
      * Search results author selector.
      *
      * @var string
