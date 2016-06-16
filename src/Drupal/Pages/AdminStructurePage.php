@@ -10,7 +10,6 @@ use Codeception\Exception\TestRuntime as RuntimeException;
 
 /**
  * Class AdminStructurePage
- * @package Youthspace\Pages
  */
 class AdminStructurePage extends Page
 {

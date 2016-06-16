@@ -6,9 +6,6 @@
 
 namespace Codeception\Module\Drupal\Pages;
 
-use Codeception\Configuration;
-use Codeception\Util\Fixtures;
-
 /**
  * Class Page.
  */
@@ -167,68 +164,6 @@ class Page
      * @var string
      */
     public static $fieldCollectionPlaceholder = 'div.add-new-placeholder';
-
-    /**
-     * Helper method to retrieve specific elements of Drupal configuration set in
-     * acceptance.suite.yml configuration.
-     *
-     * @todo: make this not hardcoded to the acceptance suite.
-     *
-     * @param string $key
-     *   The key of the configuration pair to retrieve.
-     *
-     * @return mixed|null
-     *   The value of the configuration key, or NULL if not found.
-     *
-     * @throws \Codeception\Exception\Configuration
-     */
-    public static function drupalConfig($key)
-    {
-        // Get Drupal configuration.
-        $config = array();
-        $s = Configuration::suiteSettings('youthspace', Configuration::config());
-        if (isset($s['modules']['config'])) {
-            $config = $s['modules']['config'];
-        }
-        if (empty($config)) {
-            throw new \Codeception\Exception\Configuration("Configuration file is invalid");
-        }
-
-        // Check if setting for $key is overwritten in any current environment
-        // configuration.
-        $env = self::getCurrentEnvironment();
-        if (isset($s['env'][$env]['modules']['config'][self::DRUPAL_MODULE_CONFIG_KEY][$key])) {
-            return $s['env'][$env]['modules']['config'][self::DRUPAL_MODULE_CONFIG_KEY][$key];
-        }
-
-        // Otherwise return the base configuration value.
-        if (isset($config[self::DRUPAL_MODULE_CONFIG_KEY][$key])) {
-            return $config[self::DRUPAL_MODULE_CONFIG_KEY][$key];
-        }
-
-        // Nothing was found.
-        return null;
-    }
-
-    /**
-     * Returns the current environment the suite is running in.
-     *
-     * @todo See if there's a better way...
-     * @todo Is it possible to use Symfony Application object available in $GLOBALS?
-     *
-     * @return string|null
-     *   Current environment name or NULL if none has been specified.
-     */
-    protected static function getCurrentEnvironment()
-    {
-        // Forgive me.
-        $envArgument = array_shift(preg_grep('/^--env=/', $GLOBALS['argv']));
-        if (!is_null($envArgument)) {
-            list(,$env) = explode('=', $envArgument);
-            return (string) $env;
-        }
-        return null;
-    }
 
     /**
      * Routing for basic pages.

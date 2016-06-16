@@ -8,7 +8,6 @@ namespace Codeception\Module\Drupal\Pages;
 
 /**
  * Class AdminTaxonomyPage
- * @package Youthspace\Pages
  */
 class AdminTaxonomyPage extends Page
 {
