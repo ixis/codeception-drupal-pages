@@ -14,7 +14,7 @@ class AdminEntityQueueSimpleEditPage
     /**
      * Base URL/path to this page.
      */
-    const URL = 'admin/structure/entityqueue/list/%s/subqueues/1/edit';
+    const URL = 'admin/structure/entityqueue/list/%s/subqueues/%s/edit';
 
     /**
      * @var string
@@ -45,12 +45,14 @@ class AdminEntityQueueSimpleEditPage
      *
      * @param string $queue_name
      *   Entity queue name.
+     * @param int $subqueue
+     *   Subqueue id.
      *
      * @return string
      *   The path.
      */
-    public static function route($queue_name)
+    public static function route($queue_name, $subqueue = 1)
     {
-        return sprintf(self::URL, $queue_name);
+        return sprintf(self::URL, $queue_name, $subqueue);
     }
 }
