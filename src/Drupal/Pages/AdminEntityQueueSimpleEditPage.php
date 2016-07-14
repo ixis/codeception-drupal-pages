@@ -18,9 +18,15 @@ class AdminEntityQueueSimpleEditPage
 
     /**
      * @var string
-     *   Selector for the autocomplete text field.
+     *   Selector for the autocomplete text field when adding files.
      */
-    public static $autoCompleteSelector = ".entityqueue-dragtable-eq-file-add.form-autocomplete";
+    public static $fileAutoCompleteSelector = ".entityqueue-dragtable-eq-file-add.form-autocomplete";
+
+    /**
+     * @var string
+     *   Selector for the autocomplete text field when adding nodes.
+     */
+    public static $nodeAutoCompleteSelector = ".entityqueue-dragtable-eq-node-add.form-autocomplete";
 
     /**
      * @var string
